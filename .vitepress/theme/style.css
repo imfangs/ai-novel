@@ -1,0 +1,143 @@
+/* ============================================
+   金鼓谣 — CJK 文学排版主题
+   ============================================ */
+
+/* --- CSS 变量 --- */
+:root {
+  /* 暖色调配色 */
+  --vp-c-bg: #faf8f5;
+  --vp-c-bg-soft: #f5f0ea;
+  --vp-c-bg-mute: #ede6db;
+  --vp-c-text-1: #2c2a25;
+  --vp-c-text-2: #5a554c;
+  --vp-c-text-3: #8a8378;
+  --vp-c-brand-1: #b5452f;
+  --vp-c-brand-2: #c75a3f;
+  --vp-c-brand-3: #d96f54;
+  --vp-c-brand-soft: rgba(181, 69, 47, 0.12);
+
+  /* 字体 */
+  --vp-font-family-base: 'Noto Serif SC', 'Songti SC', 'SimSun', 'STSong', serif;
+  --vp-font-family-mono: 'SF Mono', 'Fira Code', monospace;
+
+  /* 侧边栏宽度 */
+  --vp-sidebar-width: 280px;
+}
+
+/* --- 暗色模式 — 古墨风格 --- */
+.dark {
+  --vp-c-bg: #1a1814;
+  --vp-c-bg-soft: #242019;
+  --vp-c-bg-mute: #2e2a22;
+  --vp-c-text-1: #e8e0d4;
+  --vp-c-text-2: #b8ad9e;
+  --vp-c-text-3: #8a7f70;
+  --vp-c-brand-1: #d9785e;
+  --vp-c-brand-2: #c75a3f;
+  --vp-c-brand-3: #b5452f;
+  --vp-c-brand-soft: rgba(217, 120, 94, 0.15);
+}
+
+/* --- 正文排版 --- */
+.vp-doc {
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+}
+
+.vp-doc p {
+  text-align: justify;
+  margin: 1em 0;
+}
+
+/* 正文容器宽度 */
+.VPDoc .container .content {
+  max-width: 720px !important;
+}
+
+/* --- 章节标题 --- */
+.vp-doc h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 2rem;
+}
+
+.vp-doc h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--vp-c-bg-mute);
+  padding-bottom: 0.5em;
+}
+
+/* --- 场景分隔符：--- → ◆  ◆  ◆ --- */
+.vp-doc hr {
+  border: none;
+  text-align: center;
+  margin: 2.5em 0;
+  height: auto;
+  overflow: visible;
+}
+
+.vp-doc hr::after {
+  content: '◆\00a0\00a0◆\00a0\00a0◆';
+  display: inline-block;
+  color: var(--vp-c-brand-1);
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  opacity: 0.6;
+}
+
+/* --- 引用块（用于旁白、注释） --- */
+.vp-doc blockquote {
+  border-left: 3px solid var(--vp-c-brand-1);
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-2);
+  padding: 0.8em 1.2em;
+  font-style: normal;
+  border-radius: 0 4px 4px 0;
+}
+
+/* --- 对话文字加粗 --- */
+.vp-doc strong {
+  color: var(--vp-c-text-1);
+  font-weight: 600;
+}
+
+/* --- 首页 Hero 区域 --- */
+.VPHero .name {
+  font-family: 'Noto Serif SC', 'Songti SC', serif !important;
+}
+
+.VPHero .tagline {
+  font-family: 'Noto Serif SC', 'Songti SC', serif !important;
+  letter-spacing: 0.05em;
+}
+
+/* --- 侧边栏 --- */
+.VPSidebar .title {
+  font-weight: 600;
+}
+
+/* --- 上一章/下一章导航 --- */
+.pager-link .title {
+  font-family: 'Noto Serif SC', 'Songti SC', serif;
+}
+
+/* --- 移动端适配 --- */
+@media (max-width: 768px) {
+  .vp-doc {
+    font-size: 16px;
+    line-height: 1.85;
+    letter-spacing: 0.01em;
+  }
+
+  .vp-doc h1 {
+    font-size: 1.5rem;
+  }
+
+  .vp-doc hr {
+    margin: 2em 0;
+  }
+}
