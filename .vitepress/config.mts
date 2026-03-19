@@ -4,7 +4,7 @@ export default defineConfig({
   lang: 'zh-CN',
   title: '金鼓谣',
   description: 'AI 辅助创作的历史传奇小说',
-  base: '/ai-novel/',
+  base: '/',
 
   head: [
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
