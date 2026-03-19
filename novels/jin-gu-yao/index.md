@@ -25,6 +25,7 @@ outline: false
 | [第三章](/novels/jin-gu-yao/chapters/03) | 开仓 | 三娘在鄠县开仓放粮，消息意外传开 |
 | [第四章](/novels/jin-gu-yao/chapters/04) | 狐与虎 | 马三宝出发去说服何潘仁 |
 | [第五章](/novels/jin-gu-yao/chapters/05) | 名分 | 何潘仁来了，但事情并不简单 |
+| [第六章](/novels/jin-gu-yao/chapters/06) | 军法 | 几万人挤在一起，规矩比刀更难立 |
 
 ## 创作幕后
 

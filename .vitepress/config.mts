@@ -33,6 +33,7 @@ export default defineConfig({
                 { text: '第三章：开仓', link: '/novels/jin-gu-yao/chapters/03' },
                 { text: '第四章：狐与虎', link: '/novels/jin-gu-yao/chapters/04' },
                 { text: '第五章：名分', link: '/novels/jin-gu-yao/chapters/05' },
+                { text: '第六章：军法', link: '/novels/jin-gu-yao/chapters/06' },
               ],
             },
             {
