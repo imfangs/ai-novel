@@ -4,7 +4,7 @@
 
 以唐代平阳昭公主为主角的历史传奇小说《金鼓谣》的在线阅读网站。
 - 仓库：https://github.com/imfangs/ai-novel (public)
-- 网站：https://imfangs.github.io/ai-novel/
+- 网站：https://story.fangs.cc （自定义域名，CNAME 指向 imfangs.github.io）
 - 技术栈：VitePress 1.6.x
 - 小说源文件：`/Users/fangs/ai/小说/平阳昭公主/`
 
@@ -38,23 +38,25 @@ ai-novel/
 ### 更新部署流程
 
 ```bash
-# 1. 在 main 分支修改内容
-# 2. 本地构建
+# 1. 在 main 分支修改内容并构建
 npm run docs:build
 
-# 3. 推构建产物到 gh-pages
+# 2. 暂存 dist 到临时目录
+rm -rf /tmp/ai-novel-dist
+cp -r .vitepress/dist /tmp/ai-novel-dist
+echo "story.fangs.cc" > /tmp/ai-novel-dist/CNAME
+touch /tmp/ai-novel-dist/.nojekyll
+
+# 3. 切到 gh-pages，清空，复制构建产物
 git checkout gh-pages
-# 清除旧文件（保留 .git）
-git rm -rf .
-# 复制新构建产物
-cp -r .vitepress/dist/* .
-touch .nojekyll
+find . -maxdepth 1 -not -name '.git' -not -name '.' -exec rm -rf {} +
+cp -r /tmp/ai-novel-dist/* /tmp/ai-novel-dist/.nojekyll .
 git add -A
 git commit -m "deploy: update site"
-git push origin gh-pages
+git push origin gh-pages --force
 
 # 4. 切回 main
-git checkout main
+git checkout main --force
 ```
 
 > 如果以后 GitHub billing 恢复，可以切回 Actions 自动部署模式：
@@ -67,7 +69,7 @@ git checkout main
 - **暗色模式**：古墨风格 `#1a1814`
 - **排版**：`line-height: 1.9`、`letter-spacing: 0.02em`、`max-width: 720px`、两端对齐
 - **场景分隔符**：CSS 将 `---` 渲染为 `◆  ◆  ◆` 居中装饰符
-- **base 路径**：`/ai-novel/`（config.mts 和 Pages 都需要匹配）
+- **base 路径**：`/`（使用自定义域名后改为根路径）
 
 ## 添加新章节
 
