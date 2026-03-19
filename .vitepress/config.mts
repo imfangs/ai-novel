@@ -47,6 +47,7 @@ export default defineConfig({
                 { text: '风格指南', link: '/novels/jin-gu-yao/behind-the-scenes/style-guide' },
                 { text: '创意提案', link: '/novels/jin-gu-yao/behind-the-scenes/creative-proposal' },
                 { text: '修改方案', link: '/novels/jin-gu-yao/behind-the-scenes/revision-plan' },
+                { text: '改进备忘', link: '/novels/jin-gu-yao/behind-the-scenes/improvements' },
               ],
             },
           ],

@@ -22,3 +22,4 @@ outline: false
 
 - [创意提案](/novels/jin-gu-yao/behind-the-scenes/creative-proposal) — 从"历史小说"到"情绪炸弹"的创意构想
 - [修改方案](/novels/jin-gu-yao/behind-the-scenes/revision-plan) — 前五章修改方案
+- [改进备忘](/novels/jin-gu-yao/behind-the-scenes/improvements) — 前五章复盘及后续写作方向
