@@ -6,6 +6,17 @@ set -e
 
 MSG="${1:-deploy: update site}"
 DIST_TMP="/tmp/vitepress-dist-$$"
+ON_GHPAGES=false
+
+# 异常退出时确保回到 main 分支
+cleanup() {
+  if [ "$ON_GHPAGES" = true ]; then
+    echo "⚠️  异常退出，切回 main..."
+    git checkout main --force
+  fi
+  rm -rf "$DIST_TMP"
+}
+trap cleanup EXIT
 
 # 确保在 main 分支
 BRANCH=$(git branch --show-current)
@@ -41,27 +52,20 @@ cp -r .vitepress/dist "$DIST_TMP"
 
 # 切到 gh-pages
 git checkout gh-pages
+ON_GHPAGES=true
 
-# 清除旧文件（保留 .git、node_modules、.vitepress）
+# 清除旧文件（保留 .git）
 find . -maxdepth 1 \
   ! -name '.' \
   ! -name '.git' \
-  ! -name 'node_modules' \
-  ! -name '.vitepress' \
-  ! -name 'CNAME' \
   -exec rm -rf {} +
 
 # 复制新构建产物
 cp -r "$DIST_TMP"/* .
 touch .nojekyll
-
-# 如果有 CNAME 备份，恢复它
-# （GitHub Pages 自定义域名需要 CNAME 文件）
+echo "story.fangs.cc" > CNAME
 
 # 提交并推送
-git add -A
-# 排除意外混入的目录
-git rm -rf --cached node_modules .vitepress 2>/dev/null || true
 git add -A
 
 if git diff --cached --quiet; then
@@ -73,9 +77,7 @@ else
 fi
 
 # 切回 main
-git checkout main
-
-# 清理
-rm -rf "$DIST_TMP"
+git checkout main --force
+ON_GHPAGES=false
 
 echo "🎉 完成！等 1-2 分钟后刷新 story.fangs.cc 查看"
