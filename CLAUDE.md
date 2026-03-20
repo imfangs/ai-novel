@@ -37,27 +37,19 @@ ai-novel/
 
 ### 更新部署流程
 
+使用项目根目录的 `deploy.sh` 一键部署：
+
 ```bash
-# 1. 在 main 分支修改内容并构建
-npm run docs:build
+# 带自定义 commit message
+./deploy.sh "deploy: 简要说明"
 
-# 2. 暂存 dist 到临时目录
-rm -rf /tmp/ai-novel-dist
-cp -r .vitepress/dist /tmp/ai-novel-dist
-echo "story.fangs.cc" > /tmp/ai-novel-dist/CNAME
-touch /tmp/ai-novel-dist/.nojekyll
-
-# 3. 切到 gh-pages，清空，复制构建产物
-git checkout gh-pages
-find . -maxdepth 1 -not -name '.git' -not -name '.' -exec rm -rf {} +
-cp -r /tmp/ai-novel-dist/* /tmp/ai-novel-dist/.nojekyll .
-git add -A
-git commit -m "deploy: update site"
-git push origin gh-pages --force
-
-# 4. 切回 main
-git checkout main --force
+# 使用默认 message
+./deploy.sh
 ```
+
+脚本自动完成：提交 main 未保存改动 → npm install（按需）→ vitepress build → 切到 gh-pages → 清空并复制构建产物 → 写入 CNAME + .nojekyll → push gh-pages → 切回 main。
+
+异常中断时 `trap` 会自动切回 main 分支。
 
 > 如果以后 GitHub billing 恢复，可以切回 Actions 自动部署模式：
 > `gh api repos/imfangs/ai-novel/pages -X PUT --input - <<< '{"build_type":"workflow"}'`
@@ -73,11 +65,11 @@ git checkout main --force
 
 ## 添加新章节
 
-1. 在 `novels/jin-gu-yao/chapters/` 下创建新 md 文件（如 `06.md`）
+1. 在 `novels/jin-gu-yao/chapters/` 下创建新 md 文件（如 `07.md`）
 2. 添加 frontmatter：`title` + `outline: false`
 3. 更新 `.vitepress/config.mts` 侧边栏的正文 items 数组
 4. 更新 `novels/jin-gu-yao/index.md` 章节目录表
-5. 构建并部署到 gh-pages
+5. 运行 `./deploy.sh "新增第N章《章节名》"`
 
 ## 添加新小说
 

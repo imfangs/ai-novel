@@ -28,6 +28,7 @@ export default defineConfig({
               text: '正文',
               collapsed: false,
               items: [
+                { text: '序章：长安槐', link: '/novels/jin-gu-yao/chapters/00' },
                 { text: '第一章：长安夜', link: '/novels/jin-gu-yao/chapters/01' },
                 { text: '第二章：南山路', link: '/novels/jin-gu-yao/chapters/02' },
                 { text: '第三章：开仓', link: '/novels/jin-gu-yao/chapters/03' },

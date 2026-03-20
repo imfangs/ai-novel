@@ -20,6 +20,7 @@ outline: false
 
 | 章节 | 标题 | 简介 |
 |------|------|------|
+| [序章](/novels/jin-gu-yao/chapters/00) | 长安槐 | 八岁摔马、母亲的遗言、嫁入柴府——三娘在等一件很大的事发生 |
 | [第一章](/novels/jin-gu-yao/chapters/01) | 长安夜 | 大业十三年五月十五，三娘在长安城中做出了一个决定 |
 | [第二章](/novels/jin-gu-yao/chapters/02) | 南山路 | 三娘与马三宝带着小哲威踏上南下之路 |
 | [第三章](/novels/jin-gu-yao/chapters/03) | 开仓 | 三娘在鄠县开仓放粮，消息意外传开 |
