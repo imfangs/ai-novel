@@ -28,6 +28,20 @@ outline: false
 | [第五章](/novels/jin-gu-yao/chapters/05) | 名分 | 何潘仁来了，但事情并不简单 |
 | [第六章](/novels/jin-gu-yao/chapters/06) | 军法 | 几万人挤在一起，规矩比刀更难立 |
 
+## 短剧改编 🎬
+
+将小说改编为竖屏短剧，每集 3-5 分钟，每集结尾设"钩子"悬念。查看[短剧总览](/novels/jin-gu-yao/drama/)。
+
+**第一季：长安**（序章 + 第一章改编，共 5 集）
+
+| 集数 | 标题 | 钩子 |
+|------|------|------|
+| [第 1 集](/novels/jin-gu-yao/drama/01) | 缝不完的袍子 | "这件事，她已经等了很多年" |
+| [第 2 集](/novels/jin-gu-yao/drama/02) | 月亮与槐花 | "说完这话第二年，母亲就死了" |
+| [第 3 集](/novels/jin-gu-yao/drama/03) | 八岁那年的马 | "有人比她更早看到了那封信" |
+| [第 4 集](/novels/jin-gu-yao/drama/04) | 天亮之前 | "她以为自己在布局，有人棋更早" |
+| [第 5 集](/novels/jin-gu-yao/drama/05) | 两盘棋 | "她以为是起点，他以为是陷阱。都对了。" |
+
 ## 创作幕后
 
 想了解这部小说的创作过程？查看[创作幕后](/novels/jin-gu-yao/behind-the-scenes/)。

@@ -38,6 +38,18 @@ export default defineConfig({
               ],
             },
             {
+              text: '短剧改编',
+              collapsed: false,
+              items: [
+                { text: '短剧总览', link: '/novels/jin-gu-yao/drama/' },
+                { text: '第1集：缝不完的袍子', link: '/novels/jin-gu-yao/drama/01' },
+                { text: '第2集：月亮与槐花', link: '/novels/jin-gu-yao/drama/02' },
+                { text: '第3集：八岁那年的马', link: '/novels/jin-gu-yao/drama/03' },
+                { text: '第4集：天亮之前', link: '/novels/jin-gu-yao/drama/04' },
+                { text: '第5集：两盘棋', link: '/novels/jin-gu-yao/drama/05' },
+              ],
+            },
+            {
               text: '创作幕后',
               collapsed: true,
               items: [
