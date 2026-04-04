@@ -2,8 +2,8 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   lang: 'zh-CN',
-  title: 'AI 小说',
-  description: 'AI 辅助创作的小说集',
+  title: 'AI 创作',
+  description: 'AI 辅助创作的小说与漫剧',
   base: '/',
 
   head: [
@@ -17,6 +17,7 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '金鼓谣', link: '/novels/jin-gu-yao/' },
       { text: '老张餐馆', link: '/novels/lao-zhang-restaurant/' },
+      { text: '名探漫剧', link: '/novels/detective-manga/' },
     ],
 
     sidebar: {
@@ -87,6 +88,30 @@ export default defineConfig({
               items: [
                 { text: '项目路演', link: '/novels/lao-zhang-restaurant/pitch' },
                 { text: '故事大纲', link: '/novels/lao-zhang-restaurant/behind-the-scenes/outline' },
+              ],
+            },
+          ],
+        },
+      ],
+
+      '/novels/detective-manga/': [
+        {
+          text: '名探漫剧',
+          link: '/novels/detective-manga/',
+          items: [
+            {
+              text: '第一季：少年包青天',
+              collapsed: false,
+              items: [
+                // 单集待添加
+              ],
+            },
+            {
+              text: '项目资料',
+              collapsed: false,
+              items: [
+                { text: '项目路演', link: '/novels/detective-manga/pitch' },
+                { text: '制作大纲', link: '/novels/detective-manga/behind-the-scenes/outline' },
               ],
             },
           ],
