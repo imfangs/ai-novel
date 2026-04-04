@@ -2,8 +2,8 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   lang: 'zh-CN',
-  title: '金鼓谣',
-  description: 'AI 辅助创作的历史传奇小说',
+  title: 'AI 小说',
+  description: 'AI 辅助创作的小说集',
   base: '/',
 
   head: [
@@ -16,6 +16,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '金鼓谣', link: '/novels/jin-gu-yao/' },
+      { text: '老张餐馆', link: '/novels/lao-zhang-restaurant/' },
     ],
 
     sidebar: {
@@ -62,6 +63,29 @@ export default defineConfig({
                 { text: '创意提案', link: '/novels/jin-gu-yao/behind-the-scenes/creative-proposal' },
                 { text: '修改方案', link: '/novels/jin-gu-yao/behind-the-scenes/revision-plan' },
                 { text: '改进备忘', link: '/novels/jin-gu-yao/behind-the-scenes/improvements' },
+              ],
+            },
+          ],
+        },
+      ],
+
+      '/novels/lao-zhang-restaurant/': [
+        {
+          text: '老张餐馆',
+          link: '/novels/lao-zhang-restaurant/',
+          items: [
+            {
+              text: '正文',
+              collapsed: false,
+              items: [
+                // 章节待添加
+              ],
+            },
+            {
+              text: '创作幕后',
+              collapsed: true,
+              items: [
+                { text: '故事大纲', link: '/novels/lao-zhang-restaurant/behind-the-scenes/outline' },
               ],
             },
           ],
