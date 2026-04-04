@@ -82,9 +82,10 @@ export default defineConfig({
               ],
             },
             {
-              text: '创作幕后',
-              collapsed: true,
+              text: '项目资料',
+              collapsed: false,
               items: [
+                { text: '项目路演', link: '/novels/lao-zhang-restaurant/pitch' },
                 { text: '故事大纲', link: '/novels/lao-zhang-restaurant/behind-the-scenes/outline' },
               ],
             },

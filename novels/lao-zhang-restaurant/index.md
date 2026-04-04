@@ -28,6 +28,7 @@ outline: false
 
 *即将更新*
 
-## 创作幕后
+## 项目资料
 
-- [故事大纲](/novels/lao-zhang-restaurant/behind-the-scenes/outline)
+- [**项目路演**](/novels/lao-zhang-restaurant/pitch) — 完整的项目介绍、受众分析与执行计划
+- [故事大纲](/novels/lao-zhang-restaurant/behind-the-scenes/outline) — 14集分集大纲与人物设定
